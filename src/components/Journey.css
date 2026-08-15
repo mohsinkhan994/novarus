@@ -1,0 +1,120 @@
+.journey {
+    background: #fff;
+    padding: 20px 0 56px;
+}
+
+.journey-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-navy);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    margin-bottom: 28px;
+}
+
+.journey-steps {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 0 20px 24px;
+}
+
+.journey-line {
+    position: absolute;
+    top: 26px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: repeating-linear-gradient(
+            to right,
+            var(--color-border) 0,
+            var(--color-border) 6px,
+            transparent 6px,
+            transparent 12px
+    );
+    z-index: 0;
+}
+
+.journey-step {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.journey-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--color-navy);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 0 0 5px #fff;
+}
+
+.journey-step:nth-child(2) .journey-icon { background: #6d3fd6; }
+.journey-step:nth-child(3) .journey-icon { background: #c026d3; }
+.journey-step:nth-child(4) .journey-icon { background: #db2777; }
+.journey-step:nth-child(5) .journey-icon { background: var(--color-red); }
+
+.journey-step h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-navy);
+}
+
+.journey-step p {
+    font-size: 12px;
+    color: var(--color-text-light);
+    max-width: 110px;
+}
+
+.journey-cta-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.journey-cta {
+    width: 100%;
+    max-width: 480px;
+    background: #fff;
+    color: var(--color-navy);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px;
+    border: 1.5px solid var(--color-navy);
+    border-radius: var(--radius-sm);
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.journey-cta:hover {
+    background: var(--color-navy);
+    color: #fff;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+    .journey-steps {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 28px;
+    }
+
+    .journey-line {
+        display: none;
+    }
+}
+
+@media (max-width: 460px) {
+    .journey-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

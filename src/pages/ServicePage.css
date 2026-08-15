@@ -1,0 +1,39 @@
+.service-page {
+    padding: 60px 0 100px;
+    min-height: 50vh;
+}
+
+.service-page-crumb {
+    font-size: 13px;
+    color: var(--color-text-light);
+    margin-bottom: 16px;
+}
+
+.service-page-crumb a {
+    color: var(--color-red);
+    font-weight: 500;
+}
+
+.service-page h1 {
+    font-family: var(--font-display);
+    font-size: 34px;
+    color: var(--color-navy);
+    margin-bottom: 12px;
+}
+
+.service-page-desc {
+    font-size: 15px;
+    color: var(--color-text-light);
+    max-width: 640px;
+    margin-bottom: 32px;
+}
+
+.service-page-placeholder {
+    border: 1.5px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 60px 24px;
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 14px;
+    background: var(--color-bg);
+}
