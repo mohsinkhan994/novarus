@@ -1,5 +1,5 @@
 import Journey from './Journey'
-import FreeTools from './FreeTools'
+import Freetools from './Freetools'
 import WhyRussia from './WhyRussia'
 import './Inforow.css'
 
@@ -11,7 +11,7 @@ function InfoRow() {
         <section className="info-row">
             <div className="container info-row-grid">
                 <Journey />
-                <FreeTools />
+                <Freetools />
                 <WhyRussia />
             </div>
         </section>

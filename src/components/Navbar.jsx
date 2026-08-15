@@ -9,15 +9,16 @@ import {
 } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Learn Russian', href: '#learn-russian', hasDropdown: true },
-  { label: 'Study in Russia', href: '#study-in-russia', hasDropdown: true },
-  { label: 'Travel Russia', href: '#travel-russia', hasDropdown: true },
-  { label: 'Life in Russia', href: '#life-in-russia', hasDropdown: true },
-  { label: 'Community', href: '#community' },
-  { label: 'About Us', href: '#about-us' },
+  { label: 'Home', href: '/' },
+  { label: 'Learn Russian', href: '/learn-russian', hasDropdown: true },
+  { label: 'Study in Russia', href: '/study-in-russia', hasDropdown: true },
+  { label: 'Travel Russia', href: '/travel-russia', hasDropdown: true },
+  { label: 'Life in Russia', href: '/life-in-russia', hasDropdown: true },
+  { label: 'Community', href: '/community' },
+  { label: 'About Us', href: '/about-us' },
 ]
 
 function Navbar() {
@@ -60,20 +61,20 @@ function Navbar() {
       {/* Main nav */}
       <div className="main-nav">
         <div className="container main-nav-inner">
-          <a href="#home" className="logo">
+          <Link to="/" className="logo">
             <span className="logo-mark">N</span>
             <span className="logo-text">
               <span className="logo-title">NOVARUS</span>
               <span className="logo-subtitle">YOUR GATEWAY TO RUSSIA</span>
             </span>
-          </a>
+          </Link>
 
           <nav className={`nav-links ${mobileOpen ? 'open' : ''}`}>
             <ul>
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className={`nav-link ${
                       activeLink === link.label ? 'active' : ''
                     }`}
@@ -84,7 +85,7 @@ function Navbar() {
                   >
                     {link.label}
                     {link.hasDropdown && <FiChevronDown className="chevron" />}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

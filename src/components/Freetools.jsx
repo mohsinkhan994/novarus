@@ -1,6 +1,7 @@
 import { FiArrowRight } from 'react-icons/fi'
 import { PiGaugeBold, PiCalculatorBold, PiMapTrifoldBold } from 'react-icons/pi'
 import './Freetools.css'
+import { Link } from 'react-router-dom'
 
 const tools = [
     {
@@ -10,6 +11,7 @@ const tools = [
         title: 'Russian Level Test',
         subtitle: 'Check your Russian level',
         cta: 'Start Test',
+        href: '/russian-level-test',
     },
     {
         id: 'cost-calculator',
@@ -18,6 +20,7 @@ const tools = [
         title: 'Study Cost Calculator',
         subtitle: 'Estimate your expenses',
         cta: 'Calculate',
+        href: '/study-cost-calculator',
     },
     {
         id: 'find-city',
@@ -26,6 +29,7 @@ const tools = [
         title: 'Find Your City',
         subtitle: 'Best cities for you in Russia',
         cta: 'Find Now',
+        href: '/find-your-city',
     },
 ]
 
@@ -43,9 +47,9 @@ function FreeTools() {
                         <div className="tool-row-text">
                             <h4>{tool.title}</h4>
                             <p>{tool.subtitle}</p>
-                            <button className="tool-cta">
+                            <Link to={tool.href} className="tool-cta">
                                 {tool.cta} <FiArrowRight />
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 ))}
