@@ -1,6 +1,6 @@
 import { FiArrowRight } from 'react-icons/fi'
 import { PiGaugeBold, PiCalculatorBold, PiMapTrifoldBold } from 'react-icons/pi'
-import './FreeTools.css'
+import './Freetools.css'
 
 const tools = [
     {
