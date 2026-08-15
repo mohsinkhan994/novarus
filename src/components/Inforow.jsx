@@ -1,6 +1,6 @@
 import Journey from './Journey'
-import FreeTools from './FreeTools'
-import './InfoRow.css'
+import FreeTools from './Freetools'
+import './Inforow.css'
 
 // Purely a layout wrapper: arranges Journey, FreeTools, and (next) WhyRussia
 // as 3 equal-width columns. Each of those components is a fully independent
