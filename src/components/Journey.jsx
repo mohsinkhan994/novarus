@@ -35,28 +35,29 @@ const steps = [
     },
 ]
 
+// Renders as one column's worth of content — no outer <section>/container,
+// it's meant to sit inside the InfoRow 3-column grid alongside FreeTools
+// and WhyRussia.
 function Journey() {
     return (
-        <section className="journey">
-            <div className="container">
-                <h2 className="journey-title">Your Journey to Russia</h2>
+        <div className="journey-card">
+            <h2 className="journey-card-title">Your Journey to Russia</h2>
 
-                <div className="journey-steps">
-                    <div className="journey-line" />
-                    {steps.map((step, index) => (
-                        <div className="journey-step" key={step.title}>
-                            <span className="journey-icon">{step.icon}</span>
+            <div className="journey-steps">
+                <div className="journey-line" />
+                {steps.map((step) => (
+                    <div className="journey-step" key={step.title}>
+                        <span className="journey-icon">{step.icon}</span>
+                        <div className="journey-step-text">
                             <h4>{step.title}</h4>
                             <p>{step.subtitle}</p>
                         </div>
-                    ))}
-                </div>
-
-                <div className="journey-cta-wrap">
-                    <button className="journey-cta">Start Your Journey Today</button>
-                </div>
+                    </div>
+                ))}
             </div>
-        </section>
+
+            <button className="journey-cta">Start Your Journey Today</button>
+        </div>
     )
 }
 

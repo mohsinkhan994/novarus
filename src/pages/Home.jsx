@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
-import Journey from '../components/Journey'
+import InfoRow from '../components/InfoRow'
 
 function Home() {
     return (
@@ -9,8 +9,8 @@ function Home() {
             <Navbar />
             <Hero />
             <Services />
-            <Journey />
-            {/* More sections (Free Tools, Why Russia, Success Stories, etc.) come next */}
+            <InfoRow />
+            {/* More sections (Why Russia detail, Success Stories, etc.) come next */}
         </>
     )
 }
