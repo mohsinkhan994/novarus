@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
-import InfoRow from '../components/InfoRow'
+import InfoRow from '../components/Inforow'
 
 function Home() {
     return (
