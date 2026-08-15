@@ -48,7 +48,7 @@
 
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 0.8fr);
   gap: 10px;
   flex: 1;
 }
